@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #333;
+        }
+        section {
+            display: flex;
+         }
+
+        nav {
+            width: 200px;
+            background-color: #f2f2f2;
+            height: 100%;
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            background-color: #ccc;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .pagination a:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .pagination a:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inbox</h1>
+        <a href="#">Sign out</a>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">Compose</a></li>
+                <li><a href="#">Outbox</a></li>
+            </ul>
+        </nav>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sender's Full Name</th>
+                    <th>Email Subject</th>
+                    <th>Time Received</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% for (let i = 0; i < emails.length; i++) { %>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                            <%= emails[i].senderFullName %>
+                        </td>
+                        <td><%= emails[i].emailSubject %></td>
+                        <td><%= emails[i].timeReceived %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="pagination">
+        <% for (let i = 0; i < pageCount; i++) { %>
+            <a href="#"><%= i + 1 %></a>
+        <% } %>
+    </div>  
+</body>
+</html>
+    
+            <!-- <tbody>
+                <tr>
+                    <td>
+                        <input type = "checkbox">
+                        Facebook
+                    </td>
+                    <td>Olena, you have 27 new notifications and 18 friends</td>
+                    <td>9:00 AM</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type = "checkbox">
+                        Elena Casarosa</td>
+                    <td>Meeting Tomorrow</td>
+                    <td>8:30 AM</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type = "checkbox">
+                        John Doe</td>
+                    <td>Re: Project Update</td>
+                    <td>Yesterday</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+      
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">&raquo;</a>
+    </div>  
+</body>
+</html> -->
